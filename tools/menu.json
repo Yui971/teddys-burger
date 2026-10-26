@@ -1,0 +1,121 @@
+{
+  "categories": [
+    {
+      "id": "burgers",
+      "name": "Les burgers",
+      "intro": "Steak haché de 150 g, poulet ou poisson pané. Chacun porte le nom d'un coin d'Anse-Bertrand.",
+      "image": "cat-burgers.webp",
+      "items": [
+        {"id": "big-macaille", "name": "Big Macaille", "desc": "Pain, 2 steaks de 150 g, salade, 2 tranches de fromage, sauce burger", "price": 9.90, "place": "Macaille"},
+        {"id": "big-bourg", "name": "Big Bourg", "desc": "Pain, steak de 150 g, salade, tomate, fromage, bacon, sauce barbecue", "price": 7.90, "place": "le Bourg"},
+        {"id": "big-pont-pory", "name": "Big Pont-Pory", "desc": "Pain, steak de 150 g, salade, tomate, fromage, sauce PO", "price": 7.90, "place": "Pont-Pory"},
+        {"id": "big-colas", "name": "Big Colas", "desc": "Pain, poisson pané, salade, sauce blanche", "price": 6.90, "place": "Colas"},
+        {"id": "big-chapelle", "name": "Big Chapelle", "desc": "Pain, poulet pané, salade, sauce marocaine", "price": 6.90, "place": "Chapelle"},
+        {"id": "big-ravine-sable", "name": "Big Ravine-Sable", "desc": "Pain, steak de 150 g, une tranche de fromage, sauce samouraï", "price": 5.50, "place": "Ravine-Sable"},
+        {"id": "big-luxe", "name": "Big Luxe", "desc": "Pain, steak de 150 g, salade, emmental, oignons confits, sauce PV", "price": 7.90},
+        {"id": "big-vege", "name": "Big Végé", "desc": "Pain, galette de légumes ou de pomme de terre, salade, tomate, sauce algérienne", "price": 6.90, "veg": true},
+        {"id": "big-massioux", "name": "Big Massioux", "desc": "Pain, poisson pané et poulet pané, salade, tomate, sauce blanche et sauce marocaine", "price": 8.00, "place": "Massioux"},
+        {"id": "big-teddys", "name": "Big Teddy's", "desc": "Pain, 2 steaks de 150 g, poulet pané, bacon, salade, sauce burger", "price": 12.90, "house": true},
+        {"id": "big-campeche", "name": "Big Campêche", "desc": "Pain, steak de 150 g, filet de poulet pané, salade, sauce fromage", "price": 9.90, "place": "Campêche"},
+        {"id": "ti-moun", "name": "Ti moun", "desc": "Pain, steak de 150 g, ketchup et mayonnaise. Le burger des enfants", "price": 5.00},
+        {"id": "big-guerry", "name": "Big Guerry", "desc": "Pain, steak de 150 g, salade, galette de pomme de terre, sauce PO", "price": 7.90, "place": "Guerry"},
+        {"id": "loumangne-thazard", "name": "Loumangne Thazard", "desc": "Pain, steak de dorade, salade, oignons frits, sauce blanche et créoline", "price": 9.00}
+      ]
+    },
+    {
+      "id": "speciaux",
+      "name": "Burgers spéciaux",
+      "intro": "En édition limitée, tant qu'il y en a.",
+      "image": "cat-speciaux.webp",
+      "items": [
+        {"id": "pepperoni", "name": "Pepperoni", "desc": "Pain, steak de 150 g, pepperoni, sauce tomate, mozzarella", "price": 12.90},
+        {"id": "regina", "name": "Régina", "desc": "Pain, steak de 150 g, champignons, jambon, sauce tomate, mozzarella", "price": 13.50},
+        {"id": "quatre-fromages", "name": "Quatre fromages", "desc": "Pain, steak de 150 g, cheddar, mozzarella, emmental et roquefort, filet de miel", "price": 14.50}
+      ]
+    },
+    {
+      "id": "sur-mesure",
+      "name": "Invente ton burger",
+      "intro": "Ton burger sur mesure : tu pars du pain et tu ajoutes ce que tu veux au moment de commander.",
+      "image": "cat-invente.webp",
+      "items": [
+        {"id": "pain-burger", "name": "La base : le pain burger", "desc": "Un pain moelleux, puis tu choisis viande, fromage, légumes et sauce dans la commande en ligne", "price": 3.00, "from": true}
+      ]
+    },
+    {
+      "id": "big-dog",
+      "name": "Big Dog",
+      "intro": "Nouveau : des hot-dogs XXL bien garnis, avec les frites directement dedans.",
+      "image": "cat-bigdog.webp",
+      "items": [
+        {"id": "big-dog-original", "name": "Big Dog l'original", "desc": "Saucisse, fromage, frites, ketchup, sauce cheddar", "price": 8.00},
+        {"id": "big-dog-bacon", "name": "Big Dog bacon", "desc": "Saucisse, bacon, fromage, frites, ketchup, sauce cheddar", "price": 9.90},
+        {"id": "big-dog-bolognaise", "name": "Big Dog bolognaise", "desc": "Saucisse, bolognaise, fromage, frites, ketchup, sauce cheddar", "price": 12.90}
+      ]
+    },
+    {
+      "id": "wraps",
+      "name": "Les wraps",
+      "intro": "Galette de blé roulée minute. Ou compose ton wrap en XL ou XXL.",
+      "image": "cat-wraps.webp",
+      "items": [
+        {"id": "wrap-poulet", "name": "Wrap poulet", "desc": "Galette de blé, filet de poulet, salade, tomate, fromage, sauce blanche", "price": 5.00},
+        {"id": "wrap-bacon", "name": "Wrap bacon", "desc": "Galette de blé, filet de poulet, bacon, salade, tomate, fromage, sauce blanche", "price": 6.00},
+        {"id": "ansois", "name": "Wrap Ansois", "desc": "Galette de blé, kebab, salade, frites, sauce blanche et samouraï", "price": 7.50},
+        {"id": "wrap-monster", "name": "Wrap Monster", "desc": "Galette de blé, steak de 150 g, frites, salade, sauce fromage et sauce blanche", "price": 9.50},
+        {"id": "wrap-xl", "name": "Compose ton wrap XL", "desc": "Une viande, des frites et la sauce de ton choix", "price": 9.50},
+        {"id": "wrap-xxl", "name": "Compose ton wrap XXL", "desc": "Deux galettes, deux viandes, des frites et tes sauces", "price": 15.50}
+      ]
+    },
+    {
+      "id": "wings",
+      "name": "Wings et nuggets",
+      "intro": "Les wings sont légèrement épicées. Servies en boîte.",
+      "image": "cat-wings.webp",
+      "items": [
+        {"id": "wings-6", "name": "6 wings", "desc": "Ailes de poulet légèrement épicées", "price": 6.50},
+        {"id": "wings-10", "name": "10 wings", "desc": "Ailes de poulet légèrement épicées", "price": 8.00},
+        {"id": "bucket-30", "name": "Bucket de 30 wings", "desc": "Pour toute la bande", "price": 23.00},
+        {"id": "nuggets-6", "name": "6 nuggets", "desc": "Nuggets de poulet", "price": 4.00},
+        {"id": "nuggets-10", "name": "10 nuggets", "desc": "Nuggets de poulet", "price": 6.00}
+      ]
+    },
+    {
+      "id": "frites-desserts",
+      "name": "Frites et desserts",
+      "intro": "Pour accompagner, et pour finir.",
+      "image": "cat-dessert.webp",
+      "items": [
+        {"id": "frites", "name": "Frites", "desc": "La portion", "price": 3.00},
+        {"id": "milkshake", "name": "Milkshake", "desc": "À base de glace, avec chantilly", "price": 6.90}
+      ]
+    },
+    {
+      "id": "boissons",
+      "name": "Boissons",
+      "intro": "Bien fraîches.",
+      "image": "cat-boissons.webp",
+      "items": [
+        {"id": "eau", "name": "Eau plate", "desc": "50 cl", "price": 1.50},
+        {"id": "coca", "name": "Coca", "desc": "33 cl", "price": 2.00},
+        {"id": "ordinaire", "name": "Ordinaire", "desc": "33 cl", "price": 2.00},
+        {"id": "colorado", "name": "Colorado", "desc": "50 cl", "price": 2.50},
+        {"id": "oasis", "name": "Oasis", "desc": "50 cl", "price": 2.50},
+        {"id": "royal-soda", "name": "Royal Soda", "desc": "Canette", "price": 2.50},
+        {"id": "monster", "name": "Monster", "desc": "Monster vert", "price": 3.00}
+      ]
+    },
+    {
+      "id": "bieres",
+      "name": "Bières",
+      "intro": "L'abus d'alcool est dangereux pour la santé, à consommer avec modération. Vente interdite aux mineurs.",
+      "image": "cat-bieres.webp",
+      "items": [
+        {"id": "heineken", "name": "Heineken", "desc": "25 cl", "price": 2.00},
+        {"id": "desperados", "name": "Desperados Red", "desc": "33 cl", "price": 4.00},
+        {"id": "mackeson", "name": "Mackeson", "desc": "27 cl", "price": 4.00}
+      ]
+    }
+  ],
+  "item_images": ["big-macaille", "big-bourg", "big-pont-pory", "big-colas", "big-chapelle", "big-ravine-sable", "big-luxe", "big-vege", "big-massioux", "big-teddys", "big-campeche", "ti-moun", "big-guerry", "loumangne-thazard", "wrap-xl", "wrap-xxl", "wrap-poulet", "wrap-monster", "wrap-bacon", "ansois", "wings-6", "wings-10", "nuggets-6", "nuggets-10", "bucket-30", "milkshake"]
+}

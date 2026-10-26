@@ -1,0 +1,72 @@
+[
+ {
+  "file": "assets/porte-d-enfer-anse-bertrand-guadeloupe.jpg",
+  "media": "image",
+  "ref": "openverse:a77c18df-4a71-4ec2-83af-c9bb9063322e",
+  "title": "Porte d'Enfer Anse-Bertrand (Guadeloupe)",
+  "creator": "Daniel Jolivet",
+  "creatorUrl": "https://www.flickr.com/people/26082117@N07",
+  "date": null,
+  "license": "CC BY 2.0",
+  "licenseCode": "by",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/w/index.php?curid=102979565",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Porte_d%27Enfer_Anse-Bertrand_%28Guadeloupe%29.jpg/1920px-Porte_d%27Enfer_Anse-Bertrand_%28Guadeloupe%29.jpg",
+  "width": 1920,
+  "height": 1280,
+  "bytes": 716149,
+  "credit": "\"Porte d'Enfer Anse-Bertrand (Guadeloupe)\" by Daniel Jolivet, CC BY 2.0, via Wikimedia Commons",
+  "notes": [],
+  "saved": "2026-10-26T05:04:00.667Z"
+ },
+ {
+  "file": "assets/pointe-de-la-grande-vigie-anse-bertrand.jpg",
+  "media": "image",
+  "ref": "openverse:91c19da4-ec8c-439d-be7a-fb88795a0e49",
+  "title": "Pointe de la Grande Vigie (Anse-Bertrand)",
+  "creator": "Gauthier Geoffroy",
+  "creatorUrl": "https://commons.wikimedia.org/w/index.php?title=User:Gauthier_Geoffroy&action=edit&redlink=1",
+  "date": null,
+  "license": "CC BY-SA 4.0",
+  "licenseCode": "by-sa",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/w/index.php?curid=81625195",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Pointe_de_la_Grande_Vigie_%28Anse-Bertrand%29.jpg/1920px-Pointe_de_la_Grande_Vigie_%28Anse-Bertrand%29.jpg",
+  "width": 1920,
+  "height": 1440,
+  "bytes": 741315,
+  "credit": "\"Pointe de la Grande Vigie (Anse-Bertrand)\" by Gauthier Geoffroy, CC BY-SA 4.0, via Wikimedia Commons",
+  "notes": [
+   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+  ],
+  "saved": "2026-10-26T05:04:02.257Z"
+ },
+ {
+  "file": "assets/anse-bertrand.png",
+  "media": "image",
+  "ref": "openverse:26c8ca1f-acc7-4fa5-8089-e0edac958773",
+  "title": "Anse-Bertrand",
+  "creator": "Original uploader was Godefroy at en.wikipedia",
+  "creatorUrl": "https://en.wikipedia.org/wiki/User:Godefroy",
+  "date": null,
+  "license": "CC BY-SA 3.0",
+  "licenseCode": "by-sa",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/w/index.php?curid=3825179",
+  "via": "Wikimedia Commons",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Anse-Bertrand.PNG",
+  "width": 1817,
+  "height": 1633,
+  "bytes": 177262,
+  "credit": "\"Anse-Bertrand\" by Original uploader was Godefroy at en.wikipedia, CC BY-SA 3.0, via Wikimedia Commons",
+  "notes": [
+   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+  ],
+  "saved": "2026-10-26T05:04:03.553Z"
+ }
+]
