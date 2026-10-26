@@ -578,7 +578,7 @@ def build_404():
     main = f"""<section class="lost" aria-labelledby="titre">
   <div class="lost__text">
     <h1 id="titre" class="reveal">Burger introuvable</h1>
-    <p class="reveal" style="--d:80ms">Cette page n'est pas sur la carte : elle n'existe pas, ou quelqu'un l'a mangée. Le reste du snack est toujours là.</p>
+    <p class="reveal" style="--d:80ms" data-lost-text>Cette page n'est pas sur la carte : elle n'existe pas, ou quelqu'un l'a mangée. Le reste du snack est toujours là.</p>
     <div class="lost__actions">
       <a class="btn" href="carte.html">Voir la carte</a>
       <a class="btn btn--cream" href="index.html" data-logo>Retour à l'accueil</a>

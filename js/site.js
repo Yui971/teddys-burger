@@ -250,6 +250,15 @@
   }
 
   /* =========================================================
+     404 : arrivée depuis une recherche sans résultat
+     ========================================================= */
+  var lostText = document.querySelector("[data-lost-text]");
+  var lostQuery = lostText && new URLSearchParams(window.location.search).get("recherche");
+  if (lostQuery) {
+    lostText.textContent = "« " + lostQuery.slice(0, 60) + " » n'est pas sur la carte : on ne le fait pas, ou quelqu'un l'a mangé. Le reste du snack est toujours là.";
+  }
+
+  /* =========================================================
      Carte : recherche et catégories
      ========================================================= */
   var search = document.getElementById("menu-search");
@@ -282,11 +291,19 @@
     }
     var count = document.querySelector("[data-count]");
     if (count) count.textContent = shown + (shown > 1 ? " produits" : " produit");
+    return shown;
   }
 
   if (search) {
     search.addEventListener("input", applyFilter);
-    search.addEventListener("keydown", function (e) { if (e.key === "Escape") { search.value = ""; applyFilter(); } });
+    search.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { search.value = ""; applyFilter(); }
+      // Entrée sur une recherche sans résultat : page « Burger introuvable »
+      if (e.key === "Enter" && search.value.trim() && applyFilter() === 0) {
+        e.preventDefault();
+        window.location.href = "404.html?recherche=" + encodeURIComponent(search.value.trim());
+      }
+    });
   }
   cats.forEach(function (btn) {
     btn.addEventListener("click", function () {
