@@ -266,7 +266,10 @@ def build_index():
     </div>
     <div class="hero__actions">
       {STATUS}
-      {order_btn()}
+      <div class="hero__btns">
+        {order_btn()}
+        <a class="btn btn--cream" href="{MAPS}" target="_blank" rel="noopener">{ext("Itinéraire")}</a>
+      </div>
     </div>
   </div>
   <div class="hero__stage">
