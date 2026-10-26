@@ -138,7 +138,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   position: relative;
   width: min(540px, 100%); aspect-ratio: 1;
   border-radius: var(--radius);
-  background: var(--red-2);
+  background: transparent;
 }
 .plinth__item {
   position: absolute; inset: 0;
