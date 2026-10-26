@@ -397,6 +397,8 @@ def build_index():
         "acceptsReservations": False,
         "address": {"@type": "PostalAddress", "streetAddress": "22 rue des Goyaviers, Grand Fond Macaille",
                     "postalCode": "97121", "addressLocality": "Anse-Bertrand", "addressRegion": "Guadeloupe", "addressCountry": "GP"},
+        "geo": {"@type": "GeoCoordinates", "latitude": 16.467261, "longitude": -61.503232},
+        "hasMap": MAPS,
         "openingHoursSpecification": [
             {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday"], "opens": "18:30", "closes": "22:00"},
             {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "17:30", "closes": "21:00"},
@@ -622,6 +624,13 @@ def main():
             content = content.replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1)
         (ROOT / name).write_text(content, encoding="utf-8")
         print("écrit", name, len(content), "octets")
+    # Pour Google : où trouver les pages (le 404 n'y figure pas)
+    urls = "".join(f"  <url><loc>{SITE_URL}/{'' if n == 'index.html' else n}</loc></url>\n"
+                   for n in ("index.html", "carte.html", "mentions-legales.html", "confidentialite.html"))
+    (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
+                                      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "</urlset>\n", encoding="utf-8")
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
+    print("écrit sitemap.xml et robots.txt")
 
 
 if __name__ == "__main__":
