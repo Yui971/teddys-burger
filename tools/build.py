@@ -262,7 +262,7 @@ def build_index():
     <h1 class="hero__title" id="titre">Teddy's Burger</h1>
     <div class="hero__tagline">
       <p class="hero__lead">LA référence fast food à <span class="nowrap">Anse-Bertrand</span>.</p>
-      <p class="hero__info">Burgers faits à la commande · à emporter le soir · pas de livraison</p>
+      <p class="hero__info">Burgers faits à la commande · <span class="nowrap">à emporter le soir</span> · <span class="nowrap">pas de livraison</span></p>
     </div>
     <div class="hero__actions">
       {STATUS}
