@@ -8,3 +8,5 @@ Refonte du site de Teddy's Burger, snack à Anse-Bertrand (Guadeloupe). Site sta
 - Tests du loader : `node tools/test-loader.mjs`
 
 Conception et réalisation : [Chrisnaël Berdier](https://chrisnaelberdier.com)
+
+© 2026 Chrisnaël Berdier, tous droits réservés. Ce dépôt est public pour l'aperçu, mais aucune licence n'est accordée : toute copie ou réutilisation du design ou du code sans autorisation écrite est interdite. Voir [LICENSE](LICENSE).

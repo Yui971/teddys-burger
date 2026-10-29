@@ -39,6 +39,22 @@ DESIGNER_MAIL = "berdierchrisnael@gmail.com"
 FACEBOOK = "https://www.facebook.com/teddysburger97121"
 INSTAGRAM = "https://www.instagram.com/teddys_burger"
 
+# Sécurité : seules les ressources du site lui-même sont chargées. GitHub Pages
+# n'envoie pas d'en-têtes personnalisés, la politique passe donc par une balise meta.
+# Le hash correspond au petit script en ligne qui ajoute la classe "js".
+CSP = ("default-src 'self'; script-src 'self' 'sha256-WZRJfWvsnNCPcxzZwvyhovnZGqhZaC+8gPGPRbx6wTk='; "
+       "style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; "
+       "object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests")
+
+COPYRIGHT_NOTICE = """<!--
+  Site conçu, designé et développé par Chrisnaël Berdier (chrisnaelberdier.com).
+  © 2026 Chrisnaël Berdier. Tous droits réservés.
+  Le design, la mise en page, les textes et le code de ce site sont protégés par le
+  Code de la propriété intellectuelle. Toute copie ou réutilisation, même partielle,
+  sans autorisation écrite de l'auteur constitue une contrefaçon (art. L335-2 et L335-3).
+-->
+"""
+
 e = html.escape
 
 
@@ -74,10 +90,14 @@ LOADER = """<div class="loader" id="loader" role="status" aria-label="Chargement
 def head(title, desc, path, extra=""):
     canonical = SITE_URL + "/" + ("" if path == "index.html" else path)
     return f"""<!doctype html>
-<html lang="fr">
+{COPYRIGHT_NOTICE}<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="{CSP}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="author" content="{DESIGNER}">
+<meta name="copyright" content="© 2026 {DESIGNER}, tous droits réservés">
 <script>document.documentElement.classList.add("js");</script>
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -154,8 +174,8 @@ def footer(credits=False):
       </div>
     </div>
     <div class="foot-legal">
-      <p>© <span data-year>2026</span> Teddy's Burger · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="confidentialite.html#cookies">Cookies</a></p>
-      <p>Site conçu et réalisé par <a href="{DESIGNER_URL}" target="_blank" rel="noopener">{ext("Chrisnaël Berdier")}</a></p>
+      <p><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="confidentialite.html#cookies">Cookies</a></p>
+      <p>Site conçu et réalisé par <a href="{DESIGNER_URL}" target="_blank" rel="noopener">{ext("Chrisnaël Berdier")}</a>. Design, textes et code © <span data-year>2026</span> {DESIGNER}, tous droits réservés. Toute copie est interdite (<a href="mentions-legales.html#propriete">voir la propriété intellectuelle</a>).</p>
       <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
       {f'<p class="credits">{CREDITS_INDEX}</p>' if credits else ""}
     </div>
@@ -508,8 +528,10 @@ def build_legal():
     <h2 class="reveal">Hébergement</h2>
     <p>{todo("Nom, adresse et téléphone de l'hébergeur, à compléter à la mise en ligne.")}</p>
 
-    <h2 class="reveal">Propriété intellectuelle</h2>
-    <p>Le nom, le logo, les visuels, les photos des plats et les textes de ce site appartiennent à Teddy's Burger. Toute reproduction, même partielle, est interdite sans son autorisation écrite.</p>
+    <h2 class="reveal" id="propriete">Propriété intellectuelle</h2>
+    <p>La conception graphique, la mise en page, les animations, les textes rédigés pour le site et le code source (HTML, CSS, JavaScript) sont l'œuvre originale de {DESIGNER}, qui en est l'auteur et en détient les droits d'auteur, conformément aux articles L111-1 et suivants du Code de la propriété intellectuelle. Sauf cession écrite et signée de sa part, aucun de ces droits n'est transféré.</p>
+    <p>Toute reproduction, copie, adaptation ou réutilisation de tout ou partie du site (design, structure, code, textes), par quelque moyen que ce soit et sans l'autorisation écrite de son auteur, est interdite. Elle constitue une contrefaçon, sanctionnée par les articles L335-2 et L335-3 du Code de la propriété intellectuelle (jusqu'à 3 ans d'emprisonnement et 300 000 € d'amende), et pourra donner lieu à des poursuites.</p>
+    <p>Le nom, le logo et les photos des plats de Teddy's Burger restent la propriété de Teddy's Burger.</p>
     <p>{CREDITS} Ces photos montrent la commune, pas le snack.</p>
 
     <h2 class="reveal">Commandes en ligne</h2>

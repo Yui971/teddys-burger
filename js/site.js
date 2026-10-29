@@ -1,6 +1,23 @@
-/* Teddy's Burger · interactions du site */
+/* Teddy's Burger · interactions du site
+   © 2026 Chrisnaël Berdier (chrisnaelberdier.com). Tous droits réservés.
+   Toute copie ou réutilisation sans autorisation écrite est interdite. */
 (function () {
   "use strict";
+
+  /* Le site ne s'affiche dans le cadre d'un autre site que sur le portfolio de l'auteur
+     (et en local pour le développement). Ailleurs, la page se masque et tente de sortir du cadre. */
+  var FRAME_OK = /^(https:\/\/(www\.)?chrisnaelberdier\.com|https:\/\/yui971\.github\.io|https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?|file:\/\/)$/;
+  if (window.top !== window.self) {
+    var ancestors = window.location.ancestorOrigins;
+    var origins = ancestors && ancestors.length
+      ? Array.prototype.slice.call(ancestors)
+      : [(document.referrer.match(/^[a-z]+:\/\/[^\/]*/i) || [""])[0]];
+    var framedOk = origins.every(function (o) { return FRAME_OK.test(o); });
+    if (!framedOk) {
+      document.documentElement.style.display = "none";
+      try { window.top.location = window.self.location.href; } catch (err) { /* navigation bloquée : la page reste masquée */ }
+    }
+  }
 
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.documentElement.classList.add("js-ready");
